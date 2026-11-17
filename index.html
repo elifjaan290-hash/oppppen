@@ -3,11 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saffron & Smoke | Artisanal Culinary Experience</title>
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Saffron &amp; Smoke | Artisanal Fire &amp; Spice Restaurant</title>
+  <meta name="description" content="Experience Saffron & Smoke, a luxury-casual open-flame restaurant offering slow-charred lamb chops, truffle saffron biryani, and artisanal desserts crafted over white oak embers." />
+  <meta name="keywords" content="Saffron and Smoke, fine dining restaurant, charcoal grill, truffle biryani, smoked lamb chops, artisanal desserts, table reservation" />
+  <meta name="author" content="Saffron & Smoke Culinary Team" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://saffronandsmoke.example.com/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:title" content="Saffron &amp; Smoke | Artisanal Fire &amp; Spice Restaurant" />
+  <meta property="og:description" content="Slow-charred delicacies, hand-ground heirloom spices, and modern plating crafted over live oakwood embers." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85" />
+  <meta property="og:url" content="https://saffronandsmoke.example.com/" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saffron &amp; Smoke | Artisanal Culinary Experience" />
+  <meta name="twitter:description" content="Where Smoke Meets Royal Saffron. Reserve your hearth-side table or order signature dishes online." />
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=85" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔥</text></svg>" />
+
+  <!-- Structured Data (JSON-LD Schema for Restaurant SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Saffron & Smoke",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85",
+    "description": "Artisanal open-flame restaurant specializing in smoked lamb chops, truffle saffron dum biryani, and wood-fired delicacies.",
+    "servesCuisine": ["Contemporary Grill", "Royal Indian Fusion", "Artisanal Desserts"],
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "14 Ember Avenue, Culinary District",
+      "addressLocality": "Karachi",
+      "addressCountry": "PK"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "12:00",
+      "closes": "23:59"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "2400"
+    }
+  }
+  </script>
+
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   
   <style>
     :root {
@@ -30,30 +84,18 @@
       font-family: 'Cormorant Garamond', serif;
     }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
-    }
-    ::-webkit-scrollbar-track {
-      background: #0e0c0a;
-    }
-    ::-webkit-scrollbar-thumb {
-      background: #332920;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #f59e0b;
-    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #0e0c0a; }
+    ::-webkit-scrollbar-thumb { background: #332920; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #f59e0b; }
 
-    /* Glassmorphism Navbar */
     .glass-nav {
-      background: rgba(14, 12, 10, 0.75);
+      background: rgba(14, 12, 10, 0.85);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border-bottom: 1px solid rgba(245, 158, 11, 0.12);
     }
 
-    /* Nav Link Hover Underline */
     .nav-link {
       position: relative;
       padding-bottom: 4px;
@@ -69,11 +111,8 @@
       transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
       transform: translateX(-50%);
     }
-    .nav-link:hover::after {
-      width: 100%;
-    }
+    .nav-link:hover::after { width: 100%; }
 
-    /* Magnetic / Shimmer Button */
     .btn-shimmer {
       position: relative;
       overflow: hidden;
@@ -87,24 +126,16 @@
       left: -100%;
       width: 60%;
       height: 100%;
-      background: linear-gradient(
-        120deg,
-        transparent,
-        rgba(255, 255, 255, 0.45),
-        transparent
-      );
+      background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.45), transparent);
       transform: skewX(-25deg);
       transition: 0.65s;
     }
-    .btn-shimmer:hover::before {
-      left: 140%;
-    }
+    .btn-shimmer:hover::before { left: 140%; }
     .btn-shimmer:hover {
       transform: translateY(-3px) scale(1.02);
       box-shadow: 0 12px 28px -6px rgba(245, 158, 11, 0.45);
     }
 
-    /* Floating Animations for Culinary Accents */
     @keyframes floatSlow {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
       50% { transform: translateY(-16px) rotate(6deg); }
@@ -118,26 +149,16 @@
       50% { opacity: 0.75; transform: scale(1.08); }
     }
 
-    .animate-float-slow {
-      animation: floatSlow 6s ease-in-out infinite;
-    }
-    .animate-float-reverse {
-      animation: floatReverse 7s ease-in-out infinite;
-    }
-    .animate-glow {
-      animation: pulseGlow 5s ease-in-out infinite;
-    }
+    .animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+    .animate-float-reverse { animation: floatReverse 7s ease-in-out infinite; }
+    .animate-glow { animation: pulseGlow 5s ease-in-out infinite; }
 
-    /* 3D Hero Dish Card */
-    .hero-tilt-wrapper {
-      perspective: 1200px;
-    }
+    .hero-tilt-wrapper { perspective: 1200px; }
     .hero-tilt-card {
       transition: transform 0.15s ease-out;
       transform-style: preserve-3d;
     }
 
-    /* Menu Card Rich Hover Effects */
     .menu-card {
       background: linear-gradient(145deg, #1a1613 0%, #120f0d 100%);
       border: 1px solid rgba(255, 255, 255, 0.06);
@@ -163,15 +184,9 @@
       transform: translateY(-10px);
       box-shadow: 0 22px 40px -15px rgba(0, 0, 0, 0.8), 0 0 25px rgba(245, 158, 11, 0.12);
     }
-    .menu-card:hover::before {
-      opacity: 1;
-    }
-    .menu-card .dish-img {
-      transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
-    }
-    .menu-card:hover .dish-img {
-      transform: scale(1.1) rotate(2deg);
-    }
+    .menu-card:hover::before { opacity: 1; }
+    .menu-card .dish-img { transition: transform 0.65s cubic-bezier(0.22, 1, 0.36, 1); }
+    .menu-card:hover .dish-img { transform: scale(1.1) rotate(2deg); }
     .menu-card .add-btn {
       transform: translateY(8px);
       opacity: 0.9;
@@ -184,7 +199,6 @@
       color: #0e0c0a;
     }
 
-    /* Scroll Reveal Utility */
     .reveal {
       opacity: 0;
       transform: translateY(32px);
@@ -195,7 +209,6 @@
       transform: translateY(0);
     }
 
-    /* Infinite Marquee */
     @keyframes marqueeScroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -205,11 +218,8 @@
       width: max-content;
       animation: marqueeScroll 32s linear infinite;
     }
-    .marquee-wrapper:hover .marquee-track {
-      animation-play-state: paused;
-    }
+    .marquee-wrapper:hover .marquee-track { animation-play-state: paused; }
 
-    /* Tab Active Pill Transition */
     .filter-btn.active {
       background: linear-gradient(135deg, #f59e0b, #ea580c);
       color: #0e0c0a;
@@ -221,323 +231,357 @@
 <body class="selection:bg-amber-500 selection:text-black">
 
   <!-- Ambient Background Radial Glows -->
-  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden">
+  <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
     <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-amber-600/10 rounded-full blur-[130px] animate-glow"></div>
     <div class="absolute top-1/2 -right-40 w-[450px] h-[450px] bg-orange-700/10 rounded-full blur-[130px] animate-glow" style="animation-delay: 2.5s;"></div>
   </div>
 
-  <!-- Sticky Glassmorphic Navbar -->
+  <!-- Sticky Glassmorphic Header -->
   <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
     <div class="max-w-7xl mx-auto px-5 sm:px-8 h-20 flex items-center justify-between">
-      <!-- Brand Logo -->
-      <a href="#" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-black font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform duration-300">
+      <a href="#home" title="Saffron & Smoke Home" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 to-orange-600 flex items-center justify-center text-black font-bold text-xl shadow-lg group-hover:rotate-12 transition-transform duration-300" aria-hidden="true">
           🔥
         </div>
         <div>
-          <span class="font-serif-display text-2xl font-bold tracking-wide text-white">Saffron <span class="text-amber-400">&</span> Smoke</span>
-          <span class="block text-[10px] uppercase tracking-[0.25em] text-stone-400 -mt-1">Fire & Spice Kitchen</span>
+          <span class="font-serif-display text-2xl font-bold tracking-wide text-white">Saffron <span class="text-amber-400">&amp;</span> Smoke</span>
+          <span class="block text-[10px] uppercase tracking-[0.25em] text-stone-400 -mt-1">Fire &amp; Spice Kitchen</span>
         </div>
       </a>
 
-      <!-- Desktop Navigation -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
-        <a href="#home" class="nav-link hover:text-amber-400 transition-colors">Home</a>
-        <a href="#menu" class="nav-link hover:text-amber-400 transition-colors">Signature Menu</a>
-        <a href="#experience" class="nav-link hover:text-amber-400 transition-colors">Live Kitchen</a>
-        <a href="#reviews" class="nav-link hover:text-amber-400 transition-colors">Guest Stories</a>
+      <nav aria-label="Primary Navigation" class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
+        <a href="#home" title="Go to Home section" class="nav-link hover:text-amber-400 transition-colors">Home</a>
+        <a href="#menu" title="View our Signature Menu" class="nav-link hover:text-amber-400 transition-colors">Signature Menu</a>
+        <a href="#experience" title="Learn about our Live Kitchen" class="nav-link hover:text-amber-400 transition-colors">Live Kitchen</a>
+        <a href="#about" title="Our Culinary Philosophy" class="nav-link hover:text-amber-400 transition-colors">Our Craft</a>
+        <a href="#reviews" title="Read Verified Guest Stories" class="nav-link hover:text-amber-400 transition-colors">Guest Stories</a>
       </nav>
 
-      <!-- Action Buttons -->
       <div class="flex items-center gap-3 sm:gap-4">
-        <button onclick="toggleCart()" class="relative p-2.5 rounded-full bg-stone-900/90 border border-stone-700/70 hover:border-amber-500/60 text-stone-200 hover:text-amber-400 transition-all hover:scale-105" aria-label="Open Cart">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <button type="button" onclick="toggleCart()" class="relative p-2.5 rounded-full bg-stone-900/90 border border-stone-700/70 hover:border-amber-500/60 text-stone-200 hover:text-amber-400 transition-all hover:scale-105 cursor-pointer" aria-label="Open Feast Bag Cart">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
           </svg>
           <span id="cart-badge" class="absolute -top-1.5 -right-1.5 w-5 h-5 rounded-full bg-amber-500 text-black text-xs font-bold flex items-center justify-center shadow">2</span>
         </button>
 
-        <button onclick="openBookingModal()" class="btn-shimmer px-5 py-2.5 rounded-full text-black font-bold text-sm tracking-wide cursor-pointer">
+        <button type="button" onclick="openBookingModal()" class="btn-shimmer px-5 py-2.5 rounded-full text-black font-bold text-sm tracking-wide cursor-pointer">
           Book a Table
         </button>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28 px-5 sm:px-8 max-w-7xl mx-auto">
-    <div class="grid lg:grid-cols-12 gap-12 items-center">
-      
-      <!-- Left Copy -->
-      <div class="lg:col-span-6 space-y-6">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-widest">
-          <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping"></span>
-          Open Flame & Artisanal Spices
-        </div>
+  <!-- Main Content Landmark -->
+  <main id="main-content">
 
-        <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-white">
-          Where Smoke Meets <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-orange-500">Royal Saffron.</span>
-        </h1>
-
-        <p class="text-stone-400 text-base sm:text-lg max-w-xl leading-relaxed">
-          Experience slow-charred delicacies, hand-ground heirloom spices, and modern plating crafted over live oakwood embers. Every bite tells a story of fire and finesse.
-        </p>
-
-        <div class="flex flex-wrap items-center gap-4 pt-2">
-          <a href="#menu" class="btn-shimmer px-8 py-4 rounded-full text-black font-bold text-sm uppercase tracking-wider inline-flex items-center gap-2">
-            Explore Menu
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-          </a>
-          <button onclick="openBookingModal()" class="px-7 py-4 rounded-full border border-stone-700 hover:border-amber-500/70 bg-stone-900/50 hover:bg-stone-900 text-white font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
-            Reserve VIP Lounge
-          </button>
-        </div>
-
-        <!-- Quick Highlights -->
-        <div class="grid grid-cols-3 gap-6 pt-6 border-t border-stone-800/80 max-w-md">
-          <div>
-            <p class="font-serif-display text-3xl font-bold text-amber-400">4.9★</p>
-            <p class="text-xs text-stone-400 mt-0.5">2,400+ Reviews</p>
+    <!-- Hero Section -->
+    <section id="home" class="relative z-10 pt-32 pb-20 lg:pt-40 lg:pb-28 px-5 sm:px-8 max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-6 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-400 text-xs font-semibold uppercase tracking-widest">
+            <span class="w-2 h-2 rounded-full bg-amber-400 animate-ping" aria-hidden="true"></span>
+            Open Flame &amp; Artisanal Spices
           </div>
-          <div>
-            <p class="font-serif-display text-3xl font-bold text-white">100%</p>
-            <p class="text-xs text-stone-400 mt-0.5">Charcoal & Oak Fire</p>
-          </div>
-          <div>
-            <p class="font-serif-display text-3xl font-bold text-amber-400">30m</p>
-            <p class="text-xs text-stone-400 mt-0.5">Express Delivery</p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Right Interactive 3D Tilting Showcase -->
-      <div class="lg:col-span-6 relative flex justify-center items-center hero-tilt-wrapper">
-        <!-- Floating Culinary Elements -->
-        <div class="absolute -top-6 left-4 sm:left-10 z-20 bg-stone-900/90 backdrop-blur-md border border-amber-500/30 px-4 py-2.5 rounded-2xl shadow-xl animate-float-slow flex items-center gap-2.5">
-          <span class="text-2xl">🌿</span>
-          <div>
-            <p class="text-xs font-bold text-white">Organic Herbs</p>
-            <p class="text-[11px] text-amber-400">Farm-to-Flame Daily</p>
-          </div>
-        </div>
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] text-white">
+            Where Smoke Meets <span class="italic text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-500 to-orange-500">Royal Saffron.</span>
+          </h1>
 
-        <div class="absolute -bottom-5 right-2 sm:right-8 z-20 bg-stone-900/90 backdrop-blur-md border border-orange-500/30 px-4 py-3 rounded-2xl shadow-xl animate-float-reverse flex items-center gap-3">
-          <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold">
-            🔥
-          </div>
-          <div>
-            <p class="text-xs font-bold text-white">Chef's Special</p>
-            <p class="text-[11px] text-stone-300">Smoked Lamb Chops • $28</p>
-          </div>
-        </div>
+          <p class="text-stone-400 text-base sm:text-lg max-w-xl leading-relaxed">
+            Experience slow-charred delicacies, hand-ground heirloom spices, and modern plating crafted over live oakwood embers at Saffron &amp; Smoke. Every bite celebrates heritage wood-fire roasting and contemporary culinary finesse.
+          </p>
 
-        <!-- Main Tilting Dish Card -->
-        <div id="hero-tilt-card" class="hero-tilt-card relative w-full max-w-md aspect-square rounded-[2.5rem] p-3 bg-gradient-to-br from-amber-500/30 via-stone-800/40 to-orange-600/20 shadow-[0_30px_70px_rgba(0,0,0,0.85)]">
-          <div class="w-full h-full rounded-[2rem] overflow-hidden relative bg-stone-950">
-            <img 
-              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" 
-              alt="Signature Fire Grilled Platter" 
-              class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
-            />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-5 left-6 right-6 flex items-end justify-between">
-              <div>
-                <span class="text-[11px] uppercase tracking-widest text-amber-400 font-semibold">Signature Platter</span>
-                <h3 class="text-2xl font-bold text-white">Ember-Glazed Ribeye</h3>
-              </div>
-              <span class="px-3 py-1 rounded-full bg-amber-500 text-black font-bold text-sm">$34</span>
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#menu" title="Explore our full signature menu" class="btn-shimmer px-8 py-4 rounded-full text-black font-bold text-sm uppercase tracking-wider inline-flex items-center gap-2">
+              Explore Menu
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <button type="button" onclick="openBookingModal()" class="px-7 py-4 rounded-full border border-stone-700 hover:border-amber-500/70 bg-stone-900/50 hover:bg-stone-900 text-white font-semibold text-sm transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
+              Reserve VIP Lounge
+            </button>
+          </div>
+
+          <div class="grid grid-cols-3 gap-6 pt-6 border-t border-stone-800/80 max-w-md">
+            <div>
+              <p class="font-serif-display text-3xl font-bold text-amber-400">4.9★</p>
+              <p class="text-xs text-stone-400 mt-0.5">2,400+ Verified Reviews</p>
+            </div>
+            <div>
+              <p class="font-serif-display text-3xl font-bold text-white">100%</p>
+              <p class="text-xs text-stone-400 mt-0.5">Charcoal &amp; Oak Fire</p>
+            </div>
+            <div>
+              <p class="font-serif-display text-3xl font-bold text-amber-400">30m</p>
+              <p class="text-xs text-stone-400 mt-0.5">Express Delivery</p>
             </div>
           </div>
         </div>
-      </div>
 
-    </div>
-  </section>
-
-  <!-- Signature Menu Section with Filter & Rich Card Hovers -->
-  <section id="menu" class="relative z-10 py-24 px-5 sm:px-8 max-w-7xl mx-auto">
-    <div class="text-center max-w-2xl mx-auto mb-12 reveal">
-      <span class="text-amber-400 text-xs font-bold uppercase tracking-[0.25em]">Curated Gastronomy</span>
-      <h2 class="text-4xl sm:text-5xl font-bold text-white mt-2">Our Signature Menu</h2>
-      <p class="text-stone-400 text-sm sm:text-base mt-3">
-        Hover over any dish to inspect textures, or filter by craving to build your feast.
-      </p>
-    </div>
-
-    <!-- Category Filter Pills -->
-    <div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
-      <button onclick="filterMenu('all', this)" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
-        All Creations
-      </button>
-      <button onclick="filterMenu('grill', this)" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
-        Charcoal Grill
-      </button>
-      <button onclick="filterMenu('mains', this)" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
-        Royal Mains
-      </button>
-      <button onclick="filterMenu('desserts', this)" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
-        Artisan Desserts
-      </button>
-    </div>
-
-    <!-- Menu Grid -->
-    <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Cards populated via JS for clean interactivity -->
-    </div>
-  </section>
-
-  <!-- Live Kitchen & Interactive Stats Section -->
-  <section id="experience" class="relative z-10 py-24 bg-stone-950/80 border-y border-stone-800/70">
-    <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
-      
-      <!-- Image Collage with Hover Zoom -->
-      <div class="grid grid-cols-2 gap-4 reveal">
-        <div class="space-y-4">
-          <div class="rounded-3xl overflow-hidden h-64 border border-stone-800 group">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80" alt="Chef Grilling" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+        <div class="lg:col-span-6 relative flex justify-center items-center hero-tilt-wrapper">
+          <div class="absolute -top-6 left-4 sm:left-10 z-20 bg-stone-900/90 backdrop-blur-md border border-amber-500/30 px-4 py-2.5 rounded-2xl shadow-xl animate-float-slow flex items-center gap-2.5">
+            <span class="text-2xl" aria-hidden="true">🌿</span>
+            <div>
+              <p class="text-xs font-bold text-white">Organic Herbs</p>
+              <p class="text-[11px] text-amber-400">Farm-to-Flame Daily</p>
+            </div>
           </div>
-          <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/15 to-orange-600/5 border border-amber-500/20">
-            <p class="font-serif-display text-3xl font-bold text-amber-400">72 Hours</p>
-            <p class="text-xs text-stone-300 mt-1">Slow spice marination process for melt-in-mouth tenderness.</p>
+
+          <div class="absolute -bottom-5 right-2 sm:right-8 z-20 bg-stone-900/90 backdrop-blur-md border border-orange-500/30 px-4 py-3 rounded-2xl shadow-xl animate-float-reverse flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center text-amber-400 font-bold" aria-hidden="true">
+              🔥
+            </div>
+            <div>
+              <p class="text-xs font-bold text-white">Chef's Special</p>
+              <p class="text-[11px] text-stone-300">Smoked Lamb Chops • $28</p>
+            </div>
+          </div>
+
+          <div id="hero-tilt-card" class="hero-tilt-card relative w-full max-w-md aspect-square rounded-[2.5rem] p-3 bg-gradient-to-br from-amber-500/30 via-stone-800/40 to-orange-600/20 shadow-[0_30px_70px_rgba(0,0,0,0.85)]">
+            <div class="w-full h-full rounded-[2rem] overflow-hidden relative bg-stone-950">
+              <img 
+                src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85" 
+                alt="Ember-Glazed Ribeye and Smoked Lamb Platter at Saffron & Smoke" 
+                width="900"
+                height="900"
+                class="w-full h-full object-cover scale-105 hover:scale-110 transition-transform duration-700"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+              <div class="absolute bottom-5 left-6 right-6 flex items-end justify-between">
+                <div>
+                  <span class="text-[11px] uppercase tracking-widest text-amber-400 font-semibold">Signature Platter</span>
+                  <h2 class="text-2xl font-bold text-white">Ember-Glazed Ribeye</h2>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-amber-500 text-black font-bold text-sm">$34</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="space-y-4 pt-8">
-          <div class="p-6 rounded-3xl bg-stone-900 border border-stone-800">
-            <p class="font-serif-display text-3xl font-bold text-white">450°C</p>
-            <p class="text-xs text-stone-400 mt-1">White-hot oakwood hearth searing locks in natural juices.</p>
-          </div>
-          <div class="rounded-3xl overflow-hidden h-64 border border-stone-800 group">
-            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=700&q=80" alt="Smoked Craft Drink" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
-          </div>
-        </div>
-      </div>
 
-      <!-- Story & Animated Counters -->
-      <div class="space-y-6 reveal">
-        <span class="text-amber-400 text-xs font-bold uppercase tracking-[0.25em]">The Craft Behind The Flame</span>
-        <h2 class="text-4xl sm:text-5xl font-bold text-white leading-tight">
-          Theatre of Fire, Smoke & Culinary Precision.
-        </h2>
-        <p class="text-stone-400 leading-relaxed">
-          Every evening at Saffron & Smoke begins with lighting seasoned white oak logs. Our open-concept hearth lets you witness the artistry of hand-ground Kashmiri saffron infusions, sizzling cast-iron platters, and aromatic smoke domes.
+      </div>
+    </section>
+
+    <!-- Signature Menu Section -->
+    <section id="menu" class="relative z-10 py-24 px-5 sm:px-8 max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12 reveal">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-[0.25em]">Curated Gastronomy</span>
+        <h2 class="text-4xl sm:text-5xl font-bold text-white mt-2">Our Signature Menu</h2>
+        <p class="text-stone-400 text-sm sm:text-base mt-3">
+          Explore our wood-fired grills, slow-cooked royal mains, and artisanal desserts. Filter by category below to customize your dining order.
         </p>
-
-        <div class="grid grid-cols-3 gap-4 pt-4">
-          <div class="p-4 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/40 transition-colors">
-            <div class="text-3xl font-bold text-amber-400 font-serif-display counter" data-target="18">0</div>
-            <div class="text-xs text-stone-400 mt-1">Master Chefs</div>
-          </div>
-          <div class="p-4 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/40 transition-colors">
-            <div class="text-3xl font-bold text-amber-400 font-serif-display counter" data-target="42">0</div>
-            <div class="text-xs text-stone-400 mt-1">Signature Spices</div>
-          </div>
-          <div class="p-4 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/40 transition-colors">
-            <div class="text-3xl font-bold text-amber-400 font-serif-display counter" data-target="15">0</div>
-            <div class="text-xs text-stone-400 mt-1">Culinary Awards</div>
-          </div>
-        </div>
       </div>
 
-    </div>
-  </section>
+      <div class="flex flex-wrap justify-center gap-3 mb-12 reveal" role="tablist" aria-label="Menu Category Filter">
+        <button type="button" onclick="filterMenu('all', this)" class="filter-btn active px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
+          All Creations
+        </button>
+        <button type="button" onclick="filterMenu('grill', this)" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
+          Charcoal Grill
+        </button>
+        <button type="button" onclick="filterMenu('mains', this)" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
+          Royal Mains
+        </button>
+        <button type="button" onclick="filterMenu('desserts', this)" class="filter-btn px-6 py-2.5 rounded-full text-sm font-medium bg-stone-900 text-stone-300 border border-stone-800 hover:border-amber-500/50 transition-all cursor-pointer">
+          Artisan Desserts
+        </button>
+      </div>
 
-  <!-- Infinite Smooth Marquee Reviews (Pauses on Hover) -->
-  <section id="reviews" class="relative z-10 py-24 overflow-hidden">
-    <div class="text-center max-w-xl mx-auto px-5 mb-12 reveal">
-      <span class="text-amber-400 text-xs font-bold uppercase tracking-[0.25em]">Wall of Love</span>
-      <h2 class="text-4xl font-bold text-white mt-2">What Food Lovers Say</h2>
-    </div>
+      <div id="menu-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Static SEO Fallback & Dynamic Cards -->
+        <article class="menu-card rounded-3xl p-4 flex flex-col justify-between group">
+          <div>
+            <div class="relative h-56 rounded-2xl overflow-hidden bg-stone-900">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80" alt="Smoked Kashmiri Lamb Chops" width="700" height="450" loading="lazy" class="dish-img w-full h-full object-cover" />
+              <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-amber-500/30 text-amber-400 text-[11px] font-semibold">Chef's Bestseller</span>
+            </div>
+            <div class="mt-4 px-1">
+              <div class="flex items-start justify-between gap-2">
+                <h3 class="text-2xl font-bold text-white group-hover:text-amber-400 transition-colors">Smoked Kashmiri Lamb Chops</h3>
+                <span class="text-lg font-bold text-amber-400 shrink-0">$28</span>
+              </div>
+              <p class="text-stone-400 text-xs leading-relaxed mt-2">Chargrilled over white oak with saffron-mint glaze and roasted garlic cloves.</p>
+            </div>
+          </div>
+          <div class="mt-5 pt-3 border-t border-stone-800/80 flex items-center justify-between px-1">
+            <span class="text-[11px] uppercase tracking-wider text-stone-500">Freshly Fired</span>
+            <button type="button" onclick="addToCart(1)" class="add-btn px-4 py-2 rounded-full bg-stone-800 text-white text-xs font-bold tracking-wide cursor-pointer">+ Add to Feast</button>
+          </div>
+        </article>
+      </div>
+    </section>
 
-    <div class="marquee-wrapper w-full overflow-hidden py-4">
-      <div class="marquee-track gap-6 px-3">
-        <!-- Review Cards (Duplicated for seamless loop) -->
-        <div class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
-          <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-          <p class="text-stone-300 text-sm leading-relaxed">"The Smoked Lamb Chops literally fell off the bone. The presentation with rosemary smoke at the table was unforgettable!"</p>
-          <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
-            <span class="font-semibold text-white text-sm">Aryan Malhotra</span>
-            <span class="text-xs text-stone-500">Food Critic</span>
+    <!-- Live Kitchen Section -->
+    <section id="experience" class="relative z-10 py-24 bg-stone-950/80 border-y border-stone-800/70">
+      <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+        
+        <div class="grid grid-cols-2 gap-4 reveal">
+          <div class="space-y-4">
+            <div class="rounded-3xl overflow-hidden h-64 border border-stone-800 group">
+              <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=700&q=80" alt="Master Chef grilling marinated meats over open charcoal flame" width="700" height="500" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
+            <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/15 to-orange-600/5 border border-amber-500/20">
+              <p class="font-serif-display text-3xl font-bold text-amber-400">72 Hours</p>
+              <p class="text-xs text-stone-300 mt-1">Slow spice marination process for melt-in-mouth tenderness and deep aroma.</p>
+            </div>
+          </div>
+          <div class="space-y-4 pt-8">
+            <div class="p-6 rounded-3xl bg-stone-900 border border-stone-800">
+              <p class="font-serif-display text-3xl font-bold text-white">450°C</p>
+              <p class="text-xs text-stone-400 mt-1">White-hot oakwood hearth searing locks in natural juices and smoky richness.</p>
+            </div>
+            <div class="rounded-3xl overflow-hidden h-64 border border-stone-800 group">
+              <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=700&q=80" alt="Artisanal smoked saffron infusion beverage" width="700" height="500" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            </div>
           </div>
         </div>
 
-        <div class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
-          <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-          <p class="text-stone-300 text-sm leading-relaxed">"Hands down the best ambiance and Truffle Saffron Biryani I've ever had. Every detail feels luxurious yet welcoming."</p>
-          <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
-            <span class="font-semibold text-white text-sm">Zara Sheikh</span>
-            <span class="text-xs text-stone-500">Verified Diner</span>
+        <div class="space-y-6 reveal">
+          <span class="text-amber-400 text-xs font-bold uppercase tracking-[0.25em]">The Craft Behind The Flame</span>
+          <h2 class="text-4xl sm:text-5xl font-bold text-white leading-tight">
+            Theatre of Fire, Smoke &amp; Culinary Precision.
+          </h2>
+          <p class="text-stone-400 leading-relaxed">
+            Every evening at Saffron &amp; Smoke begins with lighting seasoned white oak logs. Our open-concept hearth lets guests witness the artistry of hand-ground Kashmiri saffron infusions, sizzling cast-iron platters, and aromatic rosemary smoke domes prepared tableside.
+          </p>
+
+          <div class="grid grid-cols-3 gap-4 pt-4">
+            <div class="p-4 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/40 transition-colors">
+              <div class="text-3xl font-bold text-amber-400 font-serif-display counter" data-target="18">18+</div>
+              <div class="text-xs text-stone-400 mt-1">Master Chefs</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/40 transition-colors">
+              <div class="text-3xl font-bold text-amber-400 font-serif-display counter" data-target="42">42+</div>
+              <div class="text-xs text-stone-400 mt-1">Signature Spices</div>
+            </div>
+            <div class="p-4 rounded-2xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/40 transition-colors">
+              <div class="text-3xl font-bold text-amber-400 font-serif-display counter" data-target="15">15+</div>
+              <div class="text-xs text-stone-400 mt-1">Culinary Awards</div>
+            </div>
           </div>
         </div>
 
-        <div class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
-          <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-          <p class="text-stone-300 text-sm leading-relaxed">"That Molten Pistachio Kunafa is pure magic. Warm, crispy, and balanced with subtle cardamom notes."</p>
-          <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
-            <span class="font-semibold text-white text-sm">Kabir Verma</span>
-            <span class="text-xs text-stone-500">Regular Guest</span>
-          </div>
+      </div>
+    </section>
+
+    <!-- Culinary Philosophy & Dining FAQ (Boosts Content Depth & SEO Text Ratio) -->
+    <section id="about" class="relative z-10 py-20 px-5 sm:px-8 max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-10 items-start reveal">
+        <div class="p-8 rounded-3xl bg-stone-900/60 border border-stone-800 space-y-4">
+          <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Sourcing &amp; Heritage</span>
+          <h2 class="text-3xl font-bold text-white">Heirloom Spices &amp; Sustainable Wood-Fire</h2>
+          <p class="text-stone-400 text-sm leading-relaxed">
+            At Saffron &amp; Smoke, every ingredient is ethically sourced from partner farms. We roast whole coriander, green cardamom, star anise, and saffron threads in-house each morning to preserve essential oils. Our live grills burn sustainably harvested white oak and fruitwood, imparting a clean, sweet smoke profile without artificial flavorings.
+          </p>
         </div>
 
-        <!-- Duplicate Set for Infinite Scroll -->
-        <div class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
-          <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-          <p class="text-stone-300 text-sm leading-relaxed">"The Smoked Lamb Chops literally fell off the bone. The presentation with rosemary smoke at the table was unforgettable!"</p>
-          <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
-            <span class="font-semibold text-white text-sm">Aryan Malhotra</span>
-            <span class="text-xs text-stone-500">Food Critic</span>
-          </div>
-        </div>
-
-        <div class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
-          <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-          <p class="text-stone-300 text-sm leading-relaxed">"Hands down the best ambiance and Truffle Saffron Biryani I've ever had. Every detail feels luxurious yet welcoming."</p>
-          <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
-            <span class="font-semibold text-white text-sm">Zara Sheikh</span>
-            <span class="text-xs text-stone-500">Verified Diner</span>
-          </div>
-        </div>
-
-        <div class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
-          <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
-          <p class="text-stone-300 text-sm leading-relaxed">"That Molten Pistachio Kunafa is pure magic. Warm, crispy, and balanced with subtle cardamom notes."</p>
-          <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
-            <span class="font-semibold text-white text-sm">Kabir Verma</span>
-            <span class="text-xs text-stone-500">Regular Guest</span>
-          </div>
+        <div class="p-8 rounded-3xl bg-stone-900/60 border border-stone-800 space-y-4">
+          <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">Guest Information</span>
+          <h2 class="text-3xl font-bold text-white">Private Dining &amp; Express Delivery</h2>
+          <p class="text-stone-400 text-sm leading-relaxed">
+            Whether you are hosting an intimate celebration in our VIP Lounge or ordering hot charcoal-grilled platters straight to your doorstep, our culinary team guarantees restaurant-grade temperature retention and presentation. Dietary preferences including gluten-free and vegetarian royal mains are crafted on dedicated prep stations.
+          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Guest Reviews Section -->
+    <section id="reviews" class="relative z-10 py-20 overflow-hidden">
+      <div class="text-center max-w-xl mx-auto px-5 mb-12 reveal">
+        <span class="text-amber-400 text-xs font-bold uppercase tracking-[0.25em]">Wall of Love</span>
+        <h2 class="text-4xl font-bold text-white mt-2">What Food Lovers Say</h2>
+      </div>
+
+      <div class="marquee-wrapper w-full overflow-hidden py-4">
+        <div class="marquee-track gap-6 px-3">
+          <article class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="text-stone-300 text-sm leading-relaxed">"The Smoked Lamb Chops literally fell off the bone. The presentation with rosemary smoke at the table was unforgettable!"</p>
+            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
+              <span class="font-semibold text-white text-sm">Aryan Malhotra</span>
+              <span class="text-xs text-stone-500">Food Critic</span>
+            </div>
+          </article>
+
+          <article class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="text-stone-300 text-sm leading-relaxed">"Hands down the best ambiance and Truffle Saffron Biryani I have ever had. Every detail feels luxurious yet welcoming."</p>
+            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
+              <span class="font-semibold text-white text-sm">Zara Sheikh</span>
+              <span class="text-xs text-stone-500">Verified Diner</span>
+            </div>
+          </article>
+
+          <article class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3" aria-label="5 out of 5 stars">★★★★★</div>
+            <p class="text-stone-300 text-sm leading-relaxed">"That Molten Pistachio Kunafa is pure magic. Warm, crispy, and balanced with subtle cardamom notes."</p>
+            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
+              <span class="font-semibold text-white text-sm">Kabir Verma</span>
+              <span class="text-xs text-stone-500">Regular Guest</span>
+            </div>
+          </article>
+
+          <!-- Duplicate set for continuous marquee -->
+          <article class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0" aria-hidden="true">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-stone-300 text-sm leading-relaxed">"The Smoked Lamb Chops literally fell off the bone. The presentation with rosemary smoke at the table was unforgettable!"</p>
+            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
+              <span class="font-semibold text-white text-sm">Aryan Malhotra</span>
+              <span class="text-xs text-stone-500">Food Critic</span>
+            </div>
+          </article>
+
+          <article class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0" aria-hidden="true">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-stone-300 text-sm leading-relaxed">"Hands down the best ambiance and Truffle Saffron Biryani I have ever had. Every detail feels luxurious yet welcoming."</p>
+            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
+              <span class="font-semibold text-white text-sm">Zara Sheikh</span>
+              <span class="text-xs text-stone-500">Verified Diner</span>
+            </div>
+          </article>
+
+          <article class="w-80 sm:w-96 p-6 rounded-3xl bg-stone-900/90 border border-stone-800 hover:border-amber-500/50 transition-all shrink-0" aria-hidden="true">
+            <div class="flex items-center gap-1 text-amber-400 text-sm mb-3">★★★★★</div>
+            <p class="text-stone-300 text-sm leading-relaxed">"That Molten Pistachio Kunafa is pure magic. Warm, crispy, and balanced with subtle cardamom notes."</p>
+            <div class="mt-4 pt-4 border-t border-stone-800 flex items-center justify-between">
+              <span class="font-semibold text-white text-sm">Kabir Verma</span>
+              <span class="text-xs text-stone-500">Regular Guest</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="relative z-10 bg-stone-950 border-t border-stone-800/80 py-14 px-5 sm:px-8">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
       <div>
-        <span class="font-serif-display text-2xl font-bold text-white">Saffron <span class="text-amber-400">&</span> Smoke</span>
-        <p class="text-xs text-stone-400 mt-1">14 Ember Avenue, Culinary District • Open Daily 12 PM – 12 AM</p>
+        <span class="font-serif-display text-2xl font-bold text-white">Saffron <span class="text-amber-400">&amp;</span> Smoke</span>
+        <p class="text-xs text-stone-400 mt-1">14 Ember Avenue, Culinary District • Open Daily 12:00 PM – 12:00 AM</p>
       </div>
-      <div class="flex gap-6 text-sm text-stone-400">
-        <a href="#home" class="hover:text-amber-400 transition-colors">Home</a>
-        <a href="#menu" class="hover:text-amber-400 transition-colors">Menu</a>
-        <a href="#experience" class="hover:text-amber-400 transition-colors">Kitchen</a>
-        <button onclick="openBookingModal()" class="hover:text-amber-400 transition-colors cursor-pointer">Reservations</button>
-      </div>
-      <p class="text-xs text-stone-500">© 2025 Saffron & Smoke. Crafted with Fire.</p>
+      <nav aria-label="Footer Navigation" class="flex gap-6 text-sm text-stone-400">
+        <a href="#home" title="Back to top" class="hover:text-amber-400 transition-colors">Home</a>
+        <a href="#menu" title="View Signature Menu" class="hover:text-amber-400 transition-colors">Menu</a>
+        <a href="#experience" title="Live Kitchen Experience" class="hover:text-amber-400 transition-colors">Kitchen</a>
+        <a href="#about" title="Culinary Philosophy" class="hover:text-amber-400 transition-colors">Our Craft</a>
+        <button type="button" onclick="openBookingModal()" class="hover:text-amber-400 transition-colors cursor-pointer">Reservations</button>
+      </nav>
+      <p class="text-xs text-stone-500">&copy; 2026 Saffron &amp; Smoke. Crafted with Fire.</p>
     </div>
   </footer>
 
   <!-- Slide-Out Cart Drawer -->
-  <div id="cart-drawer" class="fixed inset-0 z-50 hidden">
+  <aside id="cart-drawer" class="fixed inset-0 z-50 hidden" aria-label="Shopping Cart">
     <div onclick="toggleCart()" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
     <div class="absolute top-0 right-0 bottom-0 w-full max-w-md bg-stone-950 border-l border-stone-800 p-6 flex flex-col justify-between shadow-2xl">
       <div>
         <div class="flex items-center justify-between pb-4 border-b border-stone-800">
           <h3 class="text-2xl font-bold text-white">Your Feast Bag</h3>
-          <button onclick="toggleCart()" class="p-2 text-stone-400 hover:text-white text-xl cursor-pointer">&times;</button>
+          <button type="button" onclick="toggleCart()" class="p-2 text-stone-400 hover:text-white text-xl cursor-pointer" aria-label="Close Cart">&times;</button>
         </div>
-        <div id="cart-items" class="mt-6 space-y-4 max-h-[60vh] overflow-y-auto pr-1">
-          <!-- Cart items injected by JS -->
-        </div>
+        <div id="cart-items" class="mt-6 space-y-4 max-h-[60vh] overflow-y-auto pr-1"></div>
       </div>
 
       <div class="pt-4 border-t border-stone-800 space-y-4">
@@ -545,31 +589,31 @@
           <span class="text-stone-300">Subtotal</span>
           <span id="cart-total" class="text-amber-400 text-xl">$52.00</span>
         </div>
-        <button onclick="checkoutOrder()" class="w-full btn-shimmer py-3.5 rounded-full text-black font-bold text-sm uppercase tracking-wider cursor-pointer">
+        <button type="button" onclick="checkoutOrder()" class="w-full btn-shimmer py-3.5 rounded-full text-black font-bold text-sm uppercase tracking-wider cursor-pointer">
           Place Express Order
         </button>
       </div>
     </div>
-  </div>
+  </aside>
 
   <!-- Table Reservation Modal -->
-  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+  <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <div onclick="closeBookingModal()" class="absolute inset-0 bg-black/75 backdrop-blur-sm"></div>
     <div class="relative w-full max-w-md rounded-3xl bg-stone-900 border border-amber-500/30 p-7 shadow-2xl z-10">
-      <button onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-white text-2xl cursor-pointer">&times;</button>
+      <button type="button" onclick="closeBookingModal()" class="absolute top-5 right-5 text-stone-400 hover:text-white text-2xl cursor-pointer" aria-label="Close Modal">&times;</button>
       <span class="text-amber-400 text-xs font-bold uppercase tracking-widest">VIP Dining</span>
-      <h3 class="text-3xl font-bold text-white mt-1">Reserve Your Table</h3>
-      <p class="text-stone-400 text-xs mt-1 mb-5">Instant confirmation for hearth-side & lounge seating.</p>
+      <h3 id="modal-title" class="text-3xl font-bold text-white mt-1">Reserve Your Table</h3>
+      <p class="text-stone-400 text-xs mt-1 mb-5">Instant confirmation for hearth-side &amp; lounge seating.</p>
 
       <form onsubmit="submitBooking(event)" class="space-y-4">
         <div>
-          <label class="block text-xs text-stone-300 mb-1">Guest Name</label>
-          <input type="text" required placeholder="e.g. Rohan Kapoor" class="w-full px-4 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-amber-500 outline-none text-sm text-white">
+          <label for="guest-name" class="block text-xs text-stone-300 mb-1">Guest Name</label>
+          <input id="guest-name" type="text" required placeholder="e.g. Rohan Kapoor" class="w-full px-4 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-amber-500 outline-none text-sm text-white" />
         </div>
         <div class="grid grid-cols-2 gap-3">
           <div>
-            <label class="block text-xs text-stone-300 mb-1">Guests</label>
-            <select class="w-full px-4 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-amber-500 outline-none text-sm text-white">
+            <label for="guest-count" class="block text-xs text-stone-300 mb-1">Guests</label>
+            <select id="guest-count" class="w-full px-4 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-amber-500 outline-none text-sm text-white">
               <option>2 People</option>
               <option>4 People</option>
               <option>6 People</option>
@@ -577,8 +621,8 @@
             </select>
           </div>
           <div>
-            <label class="block text-xs text-stone-300 mb-1">Time</label>
-            <select class="w-full px-4 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-amber-500 outline-none text-sm text-white">
+            <label for="booking-time" class="block text-xs text-stone-300 mb-1">Time</label>
+            <select id="booking-time" class="w-full px-4 py-2.5 rounded-xl bg-stone-950 border border-stone-800 focus:border-amber-500 outline-none text-sm text-white">
               <option>7:30 PM</option>
               <option>8:30 PM</option>
               <option>9:30 PM</option>
@@ -594,13 +638,12 @@
   </div>
 
   <!-- Toast Notification -->
-  <div id="toast" class="fixed bottom-6 right-6 z-50 translate-y-24 opacity-0 transition-all duration-300 bg-stone-900 border border-amber-500/50 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
+  <div id="toast" role="status" aria-live="polite" class="fixed bottom-6 right-6 z-50 translate-y-24 opacity-0 transition-all duration-300 bg-stone-900 border border-amber-500/50 text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3">
     <span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
     <span id="toast-msg" class="text-sm font-medium">Added to your feast bag!</span>
   </div>
 
   <script>
-    // Menu Data
     const dishes = [
       {
         id: 1,
@@ -608,7 +651,7 @@
         category: "grill",
         price: 28,
         tag: "Chef's Bestseller",
-        desc: "Chargrilled over white oak with saffron-mint glaze and roasted garlic.",
+        desc: "Chargrilled over white oak with saffron-mint glaze and roasted garlic cloves.",
         img: "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=700&q=80"
       },
       {
@@ -617,7 +660,7 @@
         category: "mains",
         price: 24,
         tag: "Royal Classic",
-        desc: "Aged basmati layered with caramelized shallots, black truffle oil & gold leaf.",
+        desc: "Aged basmati layered with caramelized shallots, black truffle oil & edible gold leaf.",
         img: "https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=700&q=80"
       },
       {
@@ -663,16 +706,15 @@
       { ...dishes[1], qty: 1 }
     ];
 
-    // Render Menu Cards
     function renderMenu(filter = 'all') {
       const grid = document.getElementById('menu-grid');
       const filtered = filter === 'all' ? dishes : dishes.filter(d => d.category === filter);
       
       grid.innerHTML = filtered.map(dish => `
-        <div class="menu-card rounded-3xl p-4 flex flex-col justify-between group">
+        <article class="menu-card rounded-3xl p-4 flex flex-col justify-between group">
           <div>
             <div class="relative h-56 rounded-2xl overflow-hidden bg-stone-900">
-              <img src="${dish.img}" alt="${dish.name}" class="dish-img w-full h-full object-cover" />
+              <img src="${dish.img}" alt="${dish.name} - ${dish.tag}" width="700" height="450" loading="lazy" class="dish-img w-full h-full object-cover" />
               <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-amber-500/30 text-amber-400 text-[11px] font-semibold">
                 ${dish.tag}
               </span>
@@ -687,11 +729,11 @@
           </div>
           <div class="mt-5 pt-3 border-t border-stone-800/80 flex items-center justify-between px-1">
             <span class="text-[11px] uppercase tracking-wider text-stone-500">Freshly Fired</span>
-            <button onclick="addToCart(${dish.id})" class="add-btn px-4 py-2 rounded-full bg-stone-800 text-white text-xs font-bold tracking-wide cursor-pointer">
+            <button type="button" onclick="addToCart(${dish.id})" class="add-btn px-4 py-2 rounded-full bg-stone-800 text-white text-xs font-bold tracking-wide cursor-pointer">
               + Add to Feast
             </button>
           </div>
-        </div>
+        </article>
       `).join('');
     }
 
@@ -701,7 +743,6 @@
       renderMenu(category);
     }
 
-    // Cart Logic
     function addToCart(id) {
       const item = dishes.find(d => d.id === id);
       const existing = cart.find(c => c.id === id);
@@ -741,15 +782,15 @@
 
       itemsContainer.innerHTML = cart.map(item => `
         <div class="flex items-center justify-between gap-3 p-3 rounded-2xl bg-stone-900 border border-stone-800">
-          <img src="${item.img}" class="w-14 h-14 rounded-xl object-cover" />
+          <img src="${item.img}" alt="${item.name}" width="56" height="56" class="w-14 h-14 rounded-xl object-cover" />
           <div class="flex-1 min-w-0">
             <h4 class="text-sm font-bold text-white truncate">${item.name}</h4>
             <p class="text-xs text-amber-400 font-semibold">$${item.price * item.qty}</p>
           </div>
           <div class="flex items-center gap-2 bg-stone-950 px-2.5 py-1 rounded-full border border-stone-800">
-            <button onclick="changeQty(${item.id}, -1)" class="text-stone-400 hover:text-white font-bold cursor-pointer">-</button>
+            <button type="button" onclick="changeQty(${item.id}, -1)" class="text-stone-400 hover:text-white font-bold cursor-pointer" aria-label="Decrease quantity">-</button>
             <span class="text-xs font-bold w-4 text-center">${item.qty}</span>
-            <button onclick="changeQty(${item.id}, 1)" class="text-amber-400 hover:text-amber-300 font-bold cursor-pointer">+</button>
+            <button type="button" onclick="changeQty(${item.id}, 1)" class="text-amber-400 hover:text-amber-300 font-bold cursor-pointer" aria-label="Increase quantity">+</button>
           </div>
         </div>
       `).join('');
@@ -767,7 +808,6 @@
       showToast("🔥 Order sent to the live kitchen!");
     }
 
-    // Modal Controls
     function openBookingModal() {
       const modal = document.getElementById('booking-modal');
       modal.classList.remove('hidden');
@@ -784,7 +824,6 @@
       showToast("✨ Table reserved! Confirmation sent.");
     }
 
-    // Toast Notification
     function showToast(msg) {
       const toast = document.getElementById('toast');
       document.getElementById('toast-msg').textContent = msg;
@@ -794,7 +833,6 @@
       }, 3000);
     }
 
-    // Interactive 3D Hero Card Tilt
     const tiltCard = document.getElementById('hero-tilt-card');
     if (tiltCard) {
       tiltCard.addEventListener('mousemove', (e) => {
@@ -812,12 +850,10 @@
       });
     }
 
-    // Scroll Reveal & Animated Counters
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('active');
-          // Trigger counters if inside
           entry.target.querySelectorAll('.counter').forEach(counter => {
             if (counter.dataset.done) return;
             counter.dataset.done = "true";
@@ -840,7 +876,6 @@
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-    // Init
     renderMenu();
     updateCartUI();
   </script>
